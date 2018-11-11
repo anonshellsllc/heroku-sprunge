@@ -1,0 +1,39 @@
+{
+  "name": "heroku-sprunge",
+  "scripts": {
+  },
+  "env": {
+    "CLEARDB_DATABASE_URL": {
+      "required": true
+    },
+    "CLOUDBOOST_APP_ID": {
+      "required": true
+    },
+    "CLOUDBOOST_CLIENT_KEY": {
+      "required": true
+    },
+    "CLOUDBOOST_MASTER_KEY": {
+      "required": true
+    },
+    "CLOUDBOOST_PORTAL": {
+      "required": true
+    },
+    "CLOUDBOOST_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "cleardb",
+    "cloudboost"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
